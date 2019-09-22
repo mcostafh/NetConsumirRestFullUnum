@@ -1,0 +1,44 @@
+﻿@model TDM.SysCRM.ViewModels.Consultor.ConsultorViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+
+@{
+    ViewBag.Title = "Editar";
+
+
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Voltar a Lista";
+    botao2.Action = "..\\Index";
+
+    botoes.Add(botao2);
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Gravar";
+    botao.Submit = true;
+
+    botoes.Add(botao);
+
+}
+<br />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.MyPanel("idEdit", "Editar Consultor")
+
+    <div class="form-horizontal">
+        @Html.Partial("_Edit", Model)
+    </div>
+    @Html.MyEndPanel(botoes)
+
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

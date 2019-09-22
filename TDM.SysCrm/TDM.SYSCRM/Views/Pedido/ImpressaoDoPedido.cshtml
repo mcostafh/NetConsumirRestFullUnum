@@ -1,0 +1,207 @@
+﻿@model TDM.SysCRM.Dominio.CabPedido
+
+@{
+    ViewBag.Title = "Espelho de Pedido";
+}
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr valign="top">
+        <td>
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr valign="top">
+                    <td style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+                        <table>
+                            <tr>
+                                <td width="" style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+                                    <span class="tit titulo"><span class='super'>Troller&nbsp;</span></span>
+                                </td>
+                            </tr>
+                        </table><table cellpadding="5" width="100%">
+                            <tr>
+                                <td>
+
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td class="tit super" style="font-size: 14pt; font-weight: bold;">
+                                                Pedido de  Compra
+                                            </td>
+                                            <td class="tit super" style="font-size: 14pt; font-weight: bold;text-align:right;">
+                                                CONFIDENCIAL
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td class="tit" style="text-align:right;">
+                                                <div class="super" style="font-family: Verdana; float: right;"><b>@Model.Aprovacao</b></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tit">
+                                                &nbsp;
+                                            </td>
+                                            <td class="tit" style="text-align:right">
+                                                Ch Pedido:
+                                                <span class="super" style="text-align:right; font-family: Verdana, " Trebuchet MS", Arial, "MS Sans Serif" ; font-weight: bold;">@Model.Chcriacao</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<br />
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+        <td width="49%" style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+            <table width="250px;">
+                <tr>
+                    <td style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+                        <span class="tit titulo">Pessoa</span>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="5" width="100%">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <span class="tpn">
+                                        <b>
+                                            <span style='font-size: 12px;'>@Model.Nome</span>
+                                            <br />
+                                        </b><br>
+
+                                </td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="2%"></td>
+        <td width="49%" style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+            <table width="250px">
+                <tr>
+                    <td style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+                        <span class="tit titulo">Informações de Cabeçalho</span>
+                    </td>
+                </tr>
+            </table>
+            <table cellpadding="5" width="100%">
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="tp">
+                                    <span class="tpn">Emissão: </span>@Model.Emissao &nbsp;&nbsp;
+                                    <span class="tpn"><br />Aprovador: @Model.Aprovador - Aprovação: @Model.Aprovacao<br /></span>
+                                    &nbsp;
+                                    <span class="tpn"><br />Total: @Model.Total<br /></span>
+                                    <br>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table><br />
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+        <td style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+            <table width="250">
+                <tr>
+                    <td width="250" style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+                        <span class="tit titulo">Itens</span>
+                    </td>
+                </tr>
+            </table><table cellpadding="5" width="100%">
+                <tr>
+                    <td>
+                        
+                        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                            <tr valign="top" style="background: #999999; color: #FFFFFF; font-family: Verdana; font-weight: bold;">
+
+                                <td class="itens tituloTab">Código</td>
+                                <td class="itens tituloTab">Nome do Recurso</td>
+                                <td class="itens tituloTab" style="padding-right:2px;text-align:right;">Unitário</td>
+                                <td class="itens tituloTab" style="padding-right:2px;text-align:right;">Quantidade</td>
+                                
+
+                            </tr>
+
+                            @foreach (var item in Model.ItensDoPedido)
+                            {
+
+                                <tr valign="top" class="conteudoTabelaFalse">
+                                    <td>@item.CodRecurso</td>
+                                    <td>@item.NomeRecurso</td>
+
+                                    <td style="padding-right:2px;text-align:right;">@item.Quantidade</td>
+
+                                    <td style="padding-right:2px;text-align:right;">@item.Unitario</td>
+
+                                </tr>
+                            }
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table><br />
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr valign="top">
+        <td style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;">
+            <table width="250">
+                <tr>
+                    <td width="250" style="border-bottom: 2px solid #B5B5B5; border-right: 2px solid #B5B5B5;"><span class="tit titulo">Títulos</span></td>
+                </tr>
+            </table><table cellpadding="5" width="100%">
+                <tr>
+                    <td>
+                        <!-- Cabe�alho -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                            <tr valign="middle" style="background: #999999; color: #FFFFFF; font-family: Verdana; font-size: 10px; font-weight: bold;">
+
+                                <td class="itens tituloTab">Número</td>
+
+                                <td class="itens tituloTab">Vencimento</td>
+
+                                <td class="itens tituloTab" style="padding-right:2px;text-align:right;">Valor*</td>
+                            </tr><!-- Titulos -->
+
+
+
+                            @foreach (var parc in Model.ParcelasDoPedido)
+                            {
+                                <tr valign="middle" class="conteudoTabelaTrue">
+                                    <td>@parc.Numero</td>
+                                    <td>@parc.Vencimento</td>
+
+                                    <td style="padding-right:2px;text-align:right;">&nbsp;</td>
+                                    <td style="padding-right:2px;text-align:right;">@parc.Valor</td>
+
+                                </tr>
+                            }
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table><br />
+
+
+<p>
+    @Html.ActionLink("Voltar", "EspelhoDePedido")
+</p>

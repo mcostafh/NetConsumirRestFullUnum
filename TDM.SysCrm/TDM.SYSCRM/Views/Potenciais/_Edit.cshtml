@@ -1,0 +1,98 @@
+﻿@model TDM.SysCRM.ViewModels.Potencial.PotencialViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<div class="row">
+    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control col-md-8 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+</div>
+
+<div class="row">
+
+    @Html.LabelFor(model => model.CpfCnpj, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+
+    @Html.EditorFor(model => model.CpfCnpj, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.CpfCnpj, "", new { @class = "text-danger" })
+
+    @Html.LabelFor(model => model.TipoDePessoa, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    @Html.EnumDropDownListFor(model => model.TipoDePessoa, htmlAttributes: new { @class = "form-control col-md-2 col-xs-10" })
+    @Html.ValidationMessageFor(model => model.TipoDePessoa, "", new { @class = "text-danger" })
+
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+
+    @Html.LabelFor(model => model.WhatsApp, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+
+    @Html.EditorFor(model => model.WhatsApp, new { htmlAttributes = new { @class = "form-control col-md-2 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.WhatsApp, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.FoneCom, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.FoneCom, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.FoneCom, "", new { @class = "text-danger" })
+
+
+    @Html.LabelFor(model => model.FoneRes, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+
+    @Html.EditorFor(model => model.FoneRes, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.FoneRes, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Celular, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+
+    @Html.EditorFor(model => model.Celular, new { htmlAttributes = new { @class = "form-control col-md-6 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Celular, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Instagram, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.Instagram, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Instagram, "", new { @class = "text-danger" })
+
+
+    @Html.LabelFor(model => model.Facebook, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    @Html.EditorFor(model => model.Facebook, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Facebook, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Canal, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EnumDropDownListFor(model => model.Canal, htmlAttributes: new { @class = "form-control col-md-6 col-xs-10" })
+    @Html.ValidationMessageFor(model => model.Canal, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Cep, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @class = "form-control col-md-3 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
+
+
+    @Html.LabelFor(model => model.Uf, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    @Html.EnumDropDownListFor(model => model.Uf, htmlAttributes: new { @class = "form-control col-md-3 col-xs-10" })
+    @Html.ValidationMessageFor(model => model.Uf, "", new { @class = "text-danger" })
+
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.NomeDoContato, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    @Html.EditorFor(model => model.NomeDoContato, new { htmlAttributes = new { @class = "form-control col-md-6 col-xs-10" } })
+    @Html.ValidationMessageFor(model => model.NomeDoContato, "", new { @class = "text-danger" })
+</div>
+
+

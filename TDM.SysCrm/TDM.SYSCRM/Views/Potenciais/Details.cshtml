@@ -1,0 +1,53 @@
+﻿@model TDM.SysCRM.ViewModels.Potencial.PotencialExibicaoViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+@{
+    ViewBag.Title = "Detalhes";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Voltar a Lista";
+    botao.Action = "..\\Index";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Editar";
+    botao2.Action = "..\\Edit/" + Model.Id;
+
+    botoes.Add(botao2);
+
+    var objQuantCols = new PropertiesQuantityColumns();
+    objQuantCols.Md = 12;
+
+
+}
+
+
+@using (Html.BeginForm())
+{
+
+
+    @Html.MyPanel("idDetails", "Potenciais", objQuantCols);
+
+    @Html.AntiForgeryToken()
+
+    <div class="form">
+
+        @Html.Partial("_Details", Model)
+
+    </div>
+
+    @Html.MyEndPanel(botoes)
+
+}
+
+
+<script type="text/javascript">
+
+    localStorage.setItem("#PotenciaisPesquisarx", '{ "url": "' + urlActionResult + '", "tipoDePesquisa": "' + tipoDePesquisa + '", "valorPesquisar":"' + termoPesquisa + '" } ');
+    debugger;
+
+
+</script>
+

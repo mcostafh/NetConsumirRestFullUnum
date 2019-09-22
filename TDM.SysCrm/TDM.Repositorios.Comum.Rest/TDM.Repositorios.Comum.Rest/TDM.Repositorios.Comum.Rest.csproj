@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Dominio\TDM.SysCRM.Dominio\TDM.SysCRM.Dominio.csproj" />
+    <ProjectReference Include="..\..\TDM.Repositorios.Comum\TDM.Repositorios.Comum.csproj" />
+  </ItemGroup>
+
+</Project>

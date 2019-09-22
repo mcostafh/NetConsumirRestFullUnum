@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAB21711-539B-4721-B36F-6EC463F0902E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TDM.SysCRM.Repositorios.Entity</RootNamespace>
+    <AssemblyName>TDM.SysCRM.Repositorios.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\TDM.SysCRM.Dominio\TDM.SysCRM.Dominio.csproj">
+      <Project>{ab7e00e1-8009-45b2-be1a-ea7880b2e1ea}</Project>
+      <Name>TDM.SysCRM.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDM.Comum.Entity\TDM.Comum.Entity.csproj">
+      <Project>{fbfa861f-571c-40a9-9e44-3e0cd2ca8e2b}</Project>
+      <Name>TDM.Comum.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDM.Repositorios.Comum.Entity\TDM.Repositorios.Comum.Entity.csproj">
+      <Project>{2bcce7a3-06e7-487f-8e1a-4f7a1e0d2457}</Project>
+      <Name>TDM.Repositorios.Comum.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDM.Repositorios.Comum\TDM.Repositorios.Comum.csproj">
+      <Project>{056783de-9ea2-4425-8d03-80ba079ecbb0}</Project>
+      <Name>TDM.Repositorios.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDM.SysCrm.AcessoADados.Entity\TDM.SysCRM.AcessoADados.Entity.csproj">
+      <Project>{a3c35f9e-9912-46bc-a024-f26e280d87d5}</Project>
+      <Name>TDM.SysCRM.AcessoADados.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

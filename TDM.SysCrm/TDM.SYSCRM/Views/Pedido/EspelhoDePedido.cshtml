@@ -1,0 +1,42 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title = "Pedido";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Espelho de Pedido</h4>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10 control-label">
+                Chave do Pedido
+            </div>
+
+            <div class="col-md-10">
+                <input type="text" id="chavePedido" name="chavePedido" />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Executar" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,48 @@
+﻿@model  IEnumerable<TDM.SysCRM.ViewModels.Consultor.ConsultorExibicaoViewModel>
+@using TDM.SysCRM.HtmlHelpers
+
+<br />
+@Html.MyPanel("idTabela", "Lista de Potenciais - Leads")
+
+
+
+@Html.MyGridInTable(3)
+
+@Html.MyGridInTableHeader(new List<string> { "Nome", "Recebe Distribuição" })
+
+
+<tbody>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+        <tr>
+        <td>
+            @item.Nome
+        </td>
+        <td>
+            @if (@item.RecebeDistribuicaoLeads)
+            {
+                <input type="checkbox" checked disabled>
+            }
+            else
+            {
+                <input type="checkbox" disabled>
+            }
+
+        </td>
+        <td>
+            @Html.MyButtonEdit(item.Id)
+            @Html.MyButtonDetails(item.Id)
+            @Html.MyButtonDelete(item.Id)
+        </td>
+        </tr>
+        }
+    }
+</tbody>
+
+@Html.MyEndGridInTable()
+
+@Html.MyEndPanel()
+

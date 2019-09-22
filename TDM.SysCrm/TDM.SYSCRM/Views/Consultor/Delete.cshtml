@@ -1,0 +1,33 @@
+﻿@model TDM.SysCRM.ViewModels.Consultor.ConsultorExibicaoViewModel
+@using TDM.SysCRM.HtmlHelpers
+@{
+    ViewBag.Title = "Excluir";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Voltar a Lista";
+    botao.Action = "..\\Index";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Excluir";
+    botao2.Submit = true;
+
+    botoes.Add(botao2);
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.MyPanel("idDelete", "Excluir consultor")
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.Partial("_Details", Model)
+
+    </div>
+    @Html.MyEndPanel(botoes)
+
+}

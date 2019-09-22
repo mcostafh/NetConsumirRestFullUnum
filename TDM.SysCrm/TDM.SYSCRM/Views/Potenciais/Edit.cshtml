@@ -1,0 +1,43 @@
+﻿@model TDM.SysCRM.ViewModels.Potencial.PotencialViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+
+@{
+    ViewBag.Title = "Editar";
+
+
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Voltar a Lista";
+    botao2.Action = "..\\Index";
+
+    botoes.Add(botao2);
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Gravar";
+    botao.Submit = true;
+
+    botoes.Add(botao);
+
+    var objQuantCols = new PropertiesQuantityColumns();
+    objQuantCols.Md = 12;
+
+}
+<br />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.MyPanel("idEdit", "Editar Lead", objQuantCols)
+
+    <div class="form-horizontal">
+        @Html.Partial("_Edit", Model)
+    </div>
+    @Html.MyEndPanel(botoes)
+
+}
+

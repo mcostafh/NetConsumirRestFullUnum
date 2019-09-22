@@ -1,0 +1,45 @@
+﻿@model TDM.SysCRM.ViewModels.DistribuirLeads.DistribuirLeadsExibicaoViewModel
+
+@{
+    ViewBag.Title = "Distribuir Leads";
+}
+
+<h2>Distribuir Leads entre consultores</h2>
+
+<p>
+    @Html.ActionLink("Distribuir", "DistribuirLeads", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<table class="table" id="tblConsultores">
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(model => model.CountLeads) @Model.CountLeads</th>
+        </tr>
+        <tr></tr>
+
+        <tr>
+            <th scope="col">
+                Consultores que receberão distribuição
+            </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @if (Model != null)
+        {
+
+            foreach (var item in Model.Consultores)
+            {
+                <tr>
+                    <td>
+                        @item.Nome
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,44 @@
+﻿@model TDM.SysCRM.ViewModels.Potencial.PotencialViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+@{
+    ViewBag.Title = "Novo";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Voltar a Lista";
+    botao.Action = ".\\Index";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Gravar";
+    botao2.Submit = true;
+
+    botoes.Add(botao2);
+
+    var objQuantCols = new PropertiesQuantityColumns();
+    objQuantCols.Md = 12;
+
+}
+
+@using (Html.BeginForm("Create","Potenciais"))
+{
+
+    @Html.MyPanel("idCreate", "Cadastrar novo Potencial", objQuantCols)
+    @Html.AntiForgeryToken()
+
+    <div class="form">
+
+        @Html.Partial("_Edit", Model)
+
+    </div>
+
+    @Html.MyEndPanel(botoes)
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

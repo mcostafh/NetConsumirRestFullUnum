@@ -1,0 +1,86 @@
+﻿@model TDM.SysCRM.ViewModels.Potencial.PotencialFiltroViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+@{
+    /**/
+
+    ViewBag.Title = "Leads - Potenciais Clientes";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Aplicar Filtro";
+    botao.Submit = true;
+    botao.Id = "filtrarBtn";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Novo";
+    botao2.Action = "\\Potenciais\\Create";
+
+    botoes.Add(botao2);
+
+    PropertiesQuantityColumns ObjQuant = new PropertiesQuantityColumns();
+    ObjQuant.Xs = 12;
+    ObjQuant.Md = 10;
+
+}
+@using (Ajax.BeginForm("Filtrar", routeValues: null, ajaxOptions: new AjaxOptions { OnSuccess = "onSuccess" }, htmlAttributes: new { id = "potenciais-form" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.MyPanel("idFiltro", "Filtros", ObjQuant)
+    
+    <div class="form-group">
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <label for="lblTP">Pesquisar por:</label>
+        </div>
+
+        <div class="col-md-6 col-sm-12 col-lg-4">
+            <select>
+                <option value="0">Todos</option>
+                <option value="1">Nome do Potencial</option>
+                <option value="2">Celular</option>
+                <option value="3">Telefone Residencial</option>
+                <option value="4">eMail</option>
+                <option value="5">FaceBook</option>
+                <option value="6">Nome de Contato</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-4 col-lg-2 col-sm-2" >
+            <label for="lbValor">Valor a pesquisar:</label>
+        </div>
+        <div class="col-md-6 col-lg-2 col-sm-2" id="dvValorPesquisa">
+            <input typeof="text" id="valorAPesquisar" class="form-control" />
+        </div>
+
+    </div>
+
+
+    @Html.MyEndPanel(botoes)
+
+
+    }
+
+
+    <div id="detailsDiv">
+
+    </div>
+
+    @section Scripts{
+        <script type="text/javascript">
+        function onSuccess(response) {
+            $.post('@Url.Action("Lista", routeValues: null)', { list: response }, function(data) {
+                $('#detailsDiv').html(data);
+            });
+        }
+
+        $(document).ready(function () {
+            loadFilter("#potenciais-form");
+            saveFilter("#potenciais-form");
+        });
+        </script>
+    }

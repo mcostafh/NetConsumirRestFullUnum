@@ -1,0 +1,57 @@
+﻿@model TDM.SysCRM.ViewModels.Consultor.ConsultorFiltroViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+@{
+    ViewBag.Title = "Consultor";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Aplicar Filtro";
+    botao.Submit = true;
+    botao.Id = "filtrarBtn";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Novo";
+    botao2.Action = "\\Consultor\\Create";
+
+    botoes.Add(botao2);
+
+}
+
+<br />
+
+@using (Ajax.BeginForm("Filtrar", routeValues: null, ajaxOptions: new AjaxOptions { OnSuccess = "onSuccess" }, htmlAttributes: new { id = "consultor-form" }))
+{
+
+    @Html.MyPanel("idFiltro", "Filtros")
+
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })
+    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+
+    @Html.MyEndPanel(botoes)
+
+
+}
+
+
+<div id="detailsDiv">
+</div>
+
+@section Scripts{
+    <script type="text/javascript">
+        function onSuccess(response) {
+            $.post('@Url.Action("Lista", routeValues: null)', { list: response }, function(data) {
+                $('#detailsDiv').html(data);
+            });
+        }
+
+        $(document).ready(function () {
+            loadFilter("#consultor-form");
+            saveFilter("#consultor-form");
+        });
+    </script>
+}

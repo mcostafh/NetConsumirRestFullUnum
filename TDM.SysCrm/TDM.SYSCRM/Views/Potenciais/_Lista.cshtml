@@ -1,0 +1,62 @@
+﻿@model  IEnumerable<TDM.SysCRM.ViewModels.Potencial.PotencialExibicaoViewModel>
+@{ 
+    PropertiesQuantityColumns ObjQuant = new PropertiesQuantityColumns();
+    ObjQuant.Xs = 12;
+    ObjQuant.Md = 12;
+
+}
+
+@using TDM.SysCRM.HtmlHelpers
+
+<br />
+@Html.MyPanel("idTabela", "Lista de Potenciais - Leads", ObjQuant)
+
+
+
+@Html.MyGridInTable(7)
+
+@Html.MyGridInTableHeader(new List<string> { "Nome", "UF", "WhatsApp", "FoneCom", "FoneRes", "Celular", "Ações" })
+
+
+
+<tbody>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @item.Nome
+        </td>
+        <td>
+            @item.Uf
+        </td>
+        <td>
+            @item.WhatsApp
+        </td>
+        <td>
+            @item.FoneCom
+        </td>
+        <td>
+            @item.FoneRes
+        </td>
+        <td>
+            @item.Celular
+        </td>
+        
+        <td>
+            @Html.MyButtonEdit(item.Id)
+            @Html.MyButtonDetails(item.Id)
+            @Html.MyButtonDelete(item.Id)
+        </td>
+    </tr>
+        }
+    }
+</tbody>
+
+@Html.MyEndGridInTable()
+
+@Html.MyEndPanel()
+
+

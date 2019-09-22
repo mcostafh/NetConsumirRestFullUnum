@@ -1,0 +1,91 @@
+﻿@using TDM.SysCRM.HtmlHelpers
+
+
+@Html.ActionLink("Restfull", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarCollapse">
+
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            @Html.ActionLink("Início", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </li>
+
+
+        @*
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>*@
+
+        @* Marketing *@
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rest x Bematech</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+
+                <li class="dropdown-item dropdown">
+
+                    <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Cadastros</a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
+
+                        <li class="dropdown-item">
+                            <a href="@Url.Action("Index","Veiculos")">Veículos Novos</a>
+                        </li>
+
+
+                    </ul>
+
+                <li class="dropdown-item dropdown">
+
+                    <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Consultas</a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
+
+                        <li class="dropdown-item">
+                            <a href="@Url.Action("EspelhoDePedido","Pedido")">Espelho de Pedidos</a>
+                        </li>
+
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </li>
+
+
+
+    </ul>
+
+
+
+
+
+    
+
+        @if (Request.IsAuthenticated)
+        {
+            <ul class="nav-item active">
+                Olá, @User.Identity.Name
+
+                <li class="nav-item active"> @Html.ActionLink("Logon", "Logoff", "Usuarios")</li>
+            </ul>
+        }
+        else
+        {
+            <ul class="nav-item active">
+                <li class="nav-item active"> @Html.ActionLink("Login", "Login", "Usuarios", new { area = "" }, new { @class = "navbar-brand" })</li>
+            </ul>
+        }
+
+    
+
+</div>
+

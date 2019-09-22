@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3C35F9E-9912-46BC-A024-F26E280D87D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TDM.SysCrm.AcessoADados.Entity</RootNamespace>
+    <AssemblyName>TDM.SysCrm.AcessoADados.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\SysCRMDBContext.cs" />
+    <Compile Include="Migrations\201807060102296_incial.cs" />
+    <Compile Include="Migrations\201807060102296_incial.Designer.cs">
+      <DependentUpon>201807060102296_incial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807071402070_ConsultorEntidade.cs" />
+    <Compile Include="Migrations\201807071402070_ConsultorEntidade.Designer.cs">
+      <DependentUpon>201807071402070_ConsultorEntidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807102229552_Ajustando.cs" />
+    <Compile Include="Migrations\201807102229552_Ajustando.Designer.cs">
+      <DependentUpon>201807102229552_Ajustando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807281132254_Ajustes.cs" />
+    <Compile Include="Migrations\201807281132254_Ajustes.Designer.cs">
+      <DependentUpon>201807281132254_Ajustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807291924160_Consultor-RecebeLeads.cs" />
+    <Compile Include="Migrations\201807291924160_Consultor-RecebeLeads.Designer.cs">
+      <DependentUpon>201807291924160_Consultor-RecebeLeads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dominio\TDM.SysCRM.Dominio\TDM.SysCRM.Dominio.csproj">
+      <Project>{ab7e00e1-8009-45b2-be1a-ea7880b2e1ea}</Project>
+      <Name>TDM.SysCRM.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TDM.Comum.Entity\TDM.Comum.Entity.csproj">
+      <Project>{fbfa861f-571c-40a9-9e44-3e0cd2ca8e2b}</Project>
+      <Name>TDM.Comum.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807060102296_incial.resx">
+      <DependentUpon>201807060102296_incial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807071402070_ConsultorEntidade.resx">
+      <DependentUpon>201807071402070_ConsultorEntidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807102229552_Ajustando.resx">
+      <DependentUpon>201807102229552_Ajustando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807281132254_Ajustes.resx">
+      <DependentUpon>201807281132254_Ajustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807291924160_Consultor-RecebeLeads.resx">
+      <DependentUpon>201807291924160_Consultor-RecebeLeads.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TypeConfiguration\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

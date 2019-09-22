@@ -1,0 +1,16 @@
+E:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.dll
+E:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.pdb
+E:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.csproj.CoreCompileInputs.cache
+E:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.dll
+E:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.pdb
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.dll
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.pdb
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.csprojAssemblyReference.cache
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.csproj.CoreCompileInputs.cache
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.dll
+C:\Projetos C#\SysCRM\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.pdb
+C:\Projetos C#\RestBematech\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.dll
+C:\Projetos C#\RestBematech\TDM.SysCRM\TDM.Repositorios.Comum\bin\Debug\TDM.Repositorios.Comum.pdb
+C:\Projetos C#\RestBematech\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.csproj.CoreCompileInputs.cache
+C:\Projetos C#\RestBematech\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.dll
+C:\Projetos C#\RestBematech\TDM.SysCRM\TDM.Repositorios.Comum\obj\Debug\TDM.Repositorios.Comum.pdb

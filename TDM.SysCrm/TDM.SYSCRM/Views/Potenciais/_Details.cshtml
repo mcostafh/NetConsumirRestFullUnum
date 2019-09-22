@@ -1,0 +1,93 @@
+﻿@model  TDM.SysCRM.ViewModels.Potencial.PotencialExibicaoViewModel
+@using TDM.SysCRM.HtmlHelpers
+
+
+
+<div class="row">
+    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-8 col-xs-10 text-left">
+        @Model.Nome
+    </div>
+
+</div>
+
+<div class="row">
+
+    @Html.LabelFor(model => model.CpfCnpj, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.CpfCnpj
+    </div>
+
+    @Html.LabelFor(model => model.TipoDePessoa, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.TipoDePessoa
+    </div>
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.Email
+    </div>
+
+    @Html.LabelFor(model => model.WhatsApp, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.WhatsApp
+    </div>
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.FoneCom, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.FoneCom
+    </div>
+
+    @Html.LabelFor(model => model.FoneRes, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.FoneRes
+    </div>
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Celular, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-8 col-xs-10 text-left">
+        @Model.Celular
+    </div>
+</div>
+
+<div class="row">
+    @Html.LabelFor(model => model.Instagram, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.Instagram
+    </div>
+    @Html.LabelFor(model => model.Facebook, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.Facebook
+    </div>
+</div>
+
+
+<div class="row">
+    @Html.LabelFor(model => model.Canal, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-8 col-xs-10 text-left">
+        @Model.Canal
+    </div>
+</div>
+<div class="row">
+    @Html.LabelFor(model => model.Cep, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.Cep
+    </div>
+
+    @Html.LabelFor(model => model.Uf, htmlAttributes: new { @class = "control-label col-md-2 col-xs-10" })
+    <div class="form-control col-md-3 col-xs-10 text-left">
+        @Model.Uf
+    </div>
+</div>
+<div class="row">
+
+    @Html.LabelFor(model => model.NomeDoContato, htmlAttributes: new { @class = "control-label col-md-4 col-xs-10" })
+    <div class="form-control col-md-8 col-xs-10 text-left">
+        @Model.NomeDoContato
+    </div>
+</div>

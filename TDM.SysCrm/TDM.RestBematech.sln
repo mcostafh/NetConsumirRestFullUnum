@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.SysCRM.Web", "TDM.SysCRM\TDM.SysCRM.Web.csproj", "{8DD2768A-0081-4044-9F1D-A7AA47CB99A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{8725D016-3680-4420-AD53-108823D68CC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.SysCRM.Dominio", "..\Dominio\TDM.SysCRM.Dominio\TDM.SysCRM.Dominio.csproj", "{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acesso a Dados", "Acesso a Dados", "{06053D97-F06B-41CF-BE46-51E7C734D778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.Comum.Entity", "TDM.Comum.Entity\TDM.Comum.Entity.csproj", "{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.SysCRM.AcessoADados.Entity", "TDM.SysCrm.AcessoADados.Entity\TDM.SysCRM.AcessoADados.Entity.csproj", "{A3C35F9E-9912-46BC-A024-F26E280D87D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositorios", "Repositorios", "{7F7E845F-D61E-40E4-8D74-E5D5188AFA87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.Repositorios.Comum", "TDM.Repositorios.Comum\TDM.Repositorios.Comum.csproj", "{056783DE-9EA2-4425-8D03-80BA079ECBB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.Repositorios.Comum.Entity", "TDM.Repositorios.Comum.Entity\TDM.Repositorios.Comum.Entity.csproj", "{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.SysCRM.Repositorios.Entity", "TDM.SysCRM.Repositorios.Entity\TDM.SysCRM.Repositorios.Entity.csproj", "{CAB21711-539B-4721-B36F-6EC463F0902E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDM.sysCRM.Repositorios.Rest", "TDM.sysCRM.Repositorios.Rest\TDM.sysCRM.Repositorios.Rest.csproj", "{02699B8A-BB07-46F3-9B68-3794B23638A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DD2768A-0081-4044-9F1D-A7AA47CB99A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD2768A-0081-4044-9F1D-A7AA47CB99A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD2768A-0081-4044-9F1D-A7AA47CB99A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD2768A-0081-4044-9F1D-A7AA47CB99A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C35F9E-9912-46BC-A024-F26E280D87D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C35F9E-9912-46BC-A024-F26E280D87D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C35F9E-9912-46BC-A024-F26E280D87D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C35F9E-9912-46BC-A024-F26E280D87D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056783DE-9EA2-4425-8D03-80BA079ECBB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056783DE-9EA2-4425-8D03-80BA079ECBB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056783DE-9EA2-4425-8D03-80BA079ECBB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056783DE-9EA2-4425-8D03-80BA079ECBB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB21711-539B-4721-B36F-6EC463F0902E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB21711-539B-4721-B36F-6EC463F0902E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB21711-539B-4721-B36F-6EC463F0902E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB21711-539B-4721-B36F-6EC463F0902E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02699B8A-BB07-46F3-9B68-3794B23638A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02699B8A-BB07-46F3-9B68-3794B23638A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02699B8A-BB07-46F3-9B68-3794B23638A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02699B8A-BB07-46F3-9B68-3794B23638A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB7E00E1-8009-45B2-BE1A-EA7880B2E1EA} = {8725D016-3680-4420-AD53-108823D68CC4}
+		{FBFA861F-571C-40A9-9E44-3E0CD2CA8E2B} = {06053D97-F06B-41CF-BE46-51E7C734D778}
+		{A3C35F9E-9912-46BC-A024-F26E280D87D5} = {06053D97-F06B-41CF-BE46-51E7C734D778}
+		{056783DE-9EA2-4425-8D03-80BA079ECBB0} = {7F7E845F-D61E-40E4-8D74-E5D5188AFA87}
+		{2BCCE7A3-06E7-487F-8E1A-4F7A1E0D2457} = {7F7E845F-D61E-40E4-8D74-E5D5188AFA87}
+		{CAB21711-539B-4721-B36F-6EC463F0902E} = {7F7E845F-D61E-40E4-8D74-E5D5188AFA87}
+		{02699B8A-BB07-46F3-9B68-3794B23638A6} = {7F7E845F-D61E-40E4-8D74-E5D5188AFA87}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1992DE8-9702-4F68-9E93-E054182E0DDE}
+	EndGlobalSection
+EndGlobal

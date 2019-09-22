@@ -1,0 +1,66 @@
+﻿@model TDM.SysCRM.Dominio.Veiculo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anomodelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anomodelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anofabric)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anofabric)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Renavanveiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Renavanveiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basechassi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basechassi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

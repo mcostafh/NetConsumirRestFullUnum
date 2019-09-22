@@ -1,0 +1,46 @@
+﻿@model TDM.SysCRM.ViewModels.Consultor.ConsultorExibicaoViewModel
+@using TDM.SysCRM.HtmlHelpers
+@{
+    ViewBag.Title = "Detalhes";
+    List<PropertiesButtons> botoes = new List<PropertiesButtons>();
+
+    PropertiesButtons botao = new PropertiesButtons();
+    botao.Label = "Voltar a Lista";
+    botao.Action = "..\\Index";
+
+    botoes.Add(botao);
+
+    PropertiesButtons botao2 = new PropertiesButtons();
+    botao2.Label = "Editar";
+    botao2.Action = "..\\Edit/" + Model.Id;
+
+    botoes.Add(botao2);
+}
+
+
+@using (Html.BeginForm())
+{
+
+
+    @Html.MyPanel("idDetails", "Consultores");
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.Partial("_Details", Model)
+
+    </div>
+
+    @Html.MyEndPanel(botoes)
+
+}
+
+<script type="text/javascript">
+
+    localStorage.setItem("#ConsultorPesquisarx", '{ "url": "' + urlActionResult + '", "tipoDePesquisa": "' + tipoDePesquisa + '", "valorPesquisar":"' + termoPesquisa + '" } ');
+    debugger;
+
+
+</script>
+

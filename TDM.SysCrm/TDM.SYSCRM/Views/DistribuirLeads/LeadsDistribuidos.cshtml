@@ -1,0 +1,42 @@
+﻿@model TDM.SysCRM.ViewModels.DistribuirLeads.LeadsDistribuidosExibicaoViewModel
+
+@{
+    ViewBag.Title = "Distribuíção Leads";
+}
+
+<h2>Resultado da Distribuição</h2>
+
+
+<table class="table" id="tblConsultores">
+
+    <thead class="thead-dark">
+        
+        <tr>
+            <th scope="col">
+                Nome do Lead
+            </th>
+            <th scope="col">
+                Nome do Consultor
+            </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @if (Model != null)
+        {
+
+            foreach (var item in Model.LeadsDistribuidos)
+            {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @item.Consultor.Nome
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,72 @@
+﻿@model TDM.SysCRM.Dominio.Veiculo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoModelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnoModelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoRenavan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoRenavan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseChassi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseChassi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chave)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

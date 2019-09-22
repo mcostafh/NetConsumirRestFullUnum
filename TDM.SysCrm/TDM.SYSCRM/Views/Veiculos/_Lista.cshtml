@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TDM.SysCRM.Dominio.Veiculo>
+@using TDM.SysCRM.HtmlHelpers
+
+<br />
+@Html.MyPanel("idTabela", "Lista de Veiculos")
+
+
+
+@Html.MyGridInTable(3)
+
+@Html.MyGridInTableHeader(new List<string> { "Código", "Código" })
+
+@Html.MyGridInTableHeader(new List<string> { "Nome", "Nome do Veículo" })
+
+
+<tbody>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @item.Codigo
+        </td>
+        <td>
+            @item.Nome
+        </td>
+        <td>
+            @Html.MyButtonEdit(item.Id)
+            @Html.MyButtonDetails(item.Id)
+
+        </td>
+    </tr>
+        }
+    }
+</tbody>
+
+@Html.MyEndGridInTable()
+
+@Html.MyEndPanel()
+
